@@ -3,15 +3,21 @@ let btnTranslate = document.querySelector('#btn-translate');
 let output = document.querySelector('.output')
 let url = 'https://api.funtranslations.com/translate/minion.json'
 
-function createUrl(text){
-    return encodeURI(url+"?"+"text="+text)
+function createUrl(text) {
+    return encodeURI(url + "?" + "text=" + text)
 }
 
-function translate(){
-    fetch(createUrl(inputTxt.value))
-    .then(response => response.json())
-    .then(json => {
-        output.innerText = json.contents.translated
-    })
+function errorHandler(error) {
+    alert('Looks like server is down. Please try again sfter sometime')
 }
-btnTranslate.addEventListener('click' , translate);
+
+function translate() {
+    fetch(createUrl(inputTxt.value))
+        .then(response => response.json())
+        .then(json => {
+            output.innerText = json.contents.translated
+        })
+        .catch(errorHandler)
+}
+
+btnTranslate.addEventListener('click', translate);

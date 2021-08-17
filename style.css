@@ -1,15 +1,51 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-textarea{
-    width: 80%;
-    height:10vh;
-    display: block;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-size: cover;
+  font-family: Ubuntu;
 }
-.output{
-    width: 80%;
-    height:10vh;
-    border: 1px solid #111;
+h2 {
+  margin: 2rem 0;
+  letter-spacing: 1.2px;
+}
+textarea {
+  width: 60%;
+  height: 20vh;
+  display: block;
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+p {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+.output {
+  width: 60%;
+  height: 20vh;
+  border: 2px solid #111;
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
